@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
-import { ChevronsLeftRight } from "lucide-react";
+import { MoveHorizontal } from "lucide-react";
 import beforeImage from "@assets/generated_images/average_male_body_for_before_comparison.png";
 import afterImage from "@assets/generated_images/muscular_male_body_for_after_comparison.png";
 
@@ -39,16 +39,19 @@ export function EvolutionDemo() {
   }, [isDragging]);
 
   return (
-    <div className="relative w-full max-w-md mx-auto aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10 select-none group">
+    <div className="relative w-full max-w-md mx-auto aspect-[3/4] overflow-hidden select-none group bg-zinc-900 grayscale contrast-125 hover:grayscale-0 transition-all duration-700">
+      {/* Scanlines Overlay */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] z-10 pointer-events-none bg-[length:100%_2px,3px_100%] pointer-events-none"></div>
+      
       {/* Background (After Image) */}
       <img 
         src={afterImage} 
         alt="Muscular Physique" 
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover opacity-90"
       />
       
-      <div className="absolute top-4 right-4 bg-primary/90 backdrop-blur text-primary-foreground text-xs font-bold px-3 py-1 rounded-full z-20">
-        AFTER: 12 WEEKS
+      <div className="absolute top-4 right-4 bg-black text-primary border border-primary text-[10px] font-mono font-bold px-2 py-1 z-20">
+        TARGET_STATE::T+12W
       </div>
 
       {/* Foreground (Before Image) - Clip Path */}
@@ -59,29 +62,24 @@ export function EvolutionDemo() {
         <img 
           src={beforeImage} 
           alt="Starting Physique" 
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover opacity-90"
         />
-        <div className="absolute top-4 left-4 bg-black/60 backdrop-blur text-white text-xs font-bold px-3 py-1 rounded-full">
-          BEFORE
+        <div className="absolute top-4 left-4 bg-black text-white border border-white/20 text-[10px] font-mono font-bold px-2 py-1">
+          CURRENT_STATE::NOW
         </div>
       </div>
 
       {/* Slider Handle */}
       <div 
-        className="absolute top-0 bottom-0 w-1 bg-white/50 backdrop-blur-sm z-30 cursor-ew-resize flex items-center justify-center"
+        className="absolute top-0 bottom-0 w-0.5 bg-primary z-30 cursor-ew-resize flex items-center justify-center"
         style={{ left: `${sliderPosition}%` }}
         onMouseDown={handleMouseDown}
         onTouchStart={handleMouseDown}
         ref={containerRef}
       >
-        <div className="w-8 h-8 bg-white rounded-full shadow-lg flex items-center justify-center text-primary -ml-[14px]">
-          <ChevronsLeftRight size={16} />
+        <div className="w-10 h-10 bg-black border border-primary flex items-center justify-center text-primary -ml-[19px] hover:bg-primary hover:text-black transition-colors">
+          <MoveHorizontal size={20} />
         </div>
-      </div>
-      
-      {/* Interactive Hint */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/50 backdrop-blur text-white text-[10px] px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-        DRAG TO COMPARE
       </div>
     </div>
   );

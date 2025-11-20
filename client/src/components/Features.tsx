@@ -1,67 +1,80 @@
 import { motion } from "framer-motion";
-import { Zap, Lock, ScanFace, TrendingUp, Layers, Smartphone } from "lucide-react";
+import { Scan, Database, Activity, Lock, Zap, Smartphone } from "lucide-react";
 
 const features = [
   {
-    icon: ScanFace,
-    title: "Photorealistic Mapping",
-    description: "Our AI maps muscle insertion points precisely to your unique bone structure for credible results."
+    icon: Scan,
+    title: "Lidar Mapping",
+    description: "Algorithm maps 400+ insertion points to your skeletal structure."
   },
   {
-    icon: TrendingUp,
-    title: "Progressive Evolution",
-    description: "Don't just see the end goal. Generate 4, 8, and 12-week progression stages based on training intensity."
+    icon: Activity,
+    title: "Phase Sequence",
+    description: "Generate T+4, T+8, and T+12 week progression models."
   },
   {
-    icon: Layers,
-    title: "Multiple Archetypes",
-    description: "Choose your target look: Lean Shredded, Mass Monster, Athletic Function, or Powerlifter."
+    icon: Database,
+    title: "Archetype Select",
+    description: "Target parameters: Hypertrophy, Strength, or Endurance builds."
   },
   {
     icon: Lock,
-    title: "100% Private Processing",
-    description: "Your photos are processed ephemerally and deleted immediately after generation. No storage."
+    title: "Ephemeral Data",
+    description: "Zero-retention policy. Source imagery deleted post-processing."
   },
   {
     icon: Zap,
-    title: "Instant Generation",
-    description: "No waiting hours for a render. Get high-resolution transformations in under 15 seconds."
+    title: "Latency < 15s",
+    description: "High-velocity rendering pipeline for instant visualization."
   },
   {
     icon: Smartphone,
-    title: "Mobile Optimized",
-    description: "Take a selfie, upload, and transform directly from your phone browser. No app download needed."
+    title: "Mobile Terminal",
+    description: "Full functionality via browser interface. No binary download."
   }
 ];
 
 export function Features() {
   return (
-    <section id="features" className="py-24 bg-secondary/30">
+    <section id="features" className="py-32 bg-background border-t border-border">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4">
-            SCIENCE-BACKED <span className="text-primary">VISUALIZATION</span>
-          </h2>
-          <p className="text-muted-foreground text-lg">
-            We don't just paste abs on a photo. GainMuscleAI analyzes anatomy, lighting, and skin texture to predict exactly how YOU would look.
-          </p>
+        <div className="grid md:grid-cols-12 gap-12 mb-20">
+          <div className="md:col-span-4">
+             <h2 className="text-5xl font-heading font-bold mb-4 uppercase leading-none">
+              Core<br/>
+              System<br/>
+              <span className="text-primary">Specs</span>
+            </h2>
+          </div>
+          <div className="md:col-span-8 border-l border-border pl-8 flex items-end">
+            <p className="text-muted-foreground font-mono text-sm max-w-xl">
+              {">"} INITIATING FEATURE OVERVIEW sequence...<br/>
+              {">"} LOADING MODULES...<br/>
+              {">"} GainMuscleAI utilizes proprietary computer vision to analyze anatomical potential. It is not a filter. It is a prediction engine.
+            </p>
+          </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
           {features.map((feature, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-card border border-border p-8 rounded-2xl hover:border-primary/50 transition-colors group"
+              transition={{ delay: index * 0.05 }}
+              className="bg-background p-10 hover:bg-secondary/30 transition-colors group relative overflow-hidden"
             >
-              <div className="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+              <div className="absolute top-4 right-4 font-mono text-xs text-muted-foreground opacity-30 group-hover:opacity-100">
+                0{index + 1}
+              </div>
+              
+              <div className="w-12 h-12 border border-primary/30 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-black transition-all rounded-none">
                 <feature.icon className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-heading font-bold mb-3">{feature.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">
+              
+              <h3 className="text-xl font-heading font-bold mb-3 uppercase tracking-wide">{feature.title}</h3>
+              <p className="text-muted-foreground font-light text-sm leading-relaxed font-mono">
                 {feature.description}
               </p>
             </motion.div>
