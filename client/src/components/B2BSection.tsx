@@ -1,15 +1,14 @@
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Trophy, Users, BarChart2, CheckCircle2 } from "lucide-react";
+import { Trophy, Users } from "lucide-react";
+import { EnterpriseForm } from "./EnterpriseForm";
 
 export function B2BSection() {
   return (
     <section id="b2b" className="py-32 bg-black text-white relative overflow-hidden">
-      {/* Abstract Background */}
       <div className="absolute bottom-0 left-0 w-full h-1/2 bg-zinc-900 skew-y-3 transform origin-bottom-left pointer-events-none"></div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
           <div>
             <div className="inline-block bg-primary text-black font-bold px-3 py-1 uppercase transform -skew-x-12 mb-6">
               <span className="block skew-x-12">For Professionals</span>
@@ -35,35 +34,33 @@ export function B2BSection() {
               ))}
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-white text-black hover:bg-gray-200 font-heading font-black italic uppercase h-14 px-8 text-xl skew-x-[-10deg]">
-                <span className="skew-x-[10deg]">Partner With Us</span>
-              </Button>
+            <div className="grid gap-6 mt-12">
+              <motion.div 
+                whileHover={{ scale: 1.02 }}
+                className="bg-zinc-900 border border-zinc-800 p-8 relative overflow-hidden group"
+              >
+                <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                  <Trophy size={120} />
+                </div>
+                <h3 className="text-3xl font-heading font-black italic uppercase text-white mb-2 relative z-10">Gym Chains</h3>
+                <p className="text-gray-400 relative z-10">Install "Future You" kiosks in your lobby. Let walk-ins visualize their potential before they even sign the contract.</p>
+              </motion.div>
+              
+              <motion.div 
+                whileHover={{ scale: 1.02 }}
+                className="bg-zinc-900 border border-zinc-800 p-8 relative overflow-hidden group"
+              >
+                <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                  <Users size={120} />
+                </div>
+                <h3 className="text-3xl font-heading font-black italic uppercase text-white mb-2 relative z-10">Online Coaches</h3>
+                <p className="text-gray-400 relative z-10">"I can get you there." Don't just say it, show it. Send personalized transformation previews in your cold DMs.</p>
+              </motion.div>
             </div>
           </div>
 
-          <div className="grid gap-6">
-            <motion.div 
-              whileHover={{ scale: 1.02 }}
-              className="bg-zinc-900 border border-zinc-800 p-8 relative overflow-hidden group"
-            >
-              <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                <Trophy size={120} />
-              </div>
-              <h3 className="text-3xl font-heading font-black italic uppercase text-white mb-2 relative z-10">Gym Chains</h3>
-              <p className="text-gray-400 relative z-10">Install "Future You" kiosks in your lobby. Let walk-ins visualize their potential before they even sign the contract.</p>
-            </motion.div>
-            
-            <motion.div 
-              whileHover={{ scale: 1.02 }}
-              className="bg-zinc-900 border border-zinc-800 p-8 relative overflow-hidden group"
-            >
-              <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                <Users size={120} />
-              </div>
-              <h3 className="text-3xl font-heading font-black italic uppercase text-white mb-2 relative z-10">Online Coaches</h3>
-              <p className="text-gray-400 relative z-10">"I can get you there." Don't just say it, show it. Send personalized transformation previews in your cold DMs.</p>
-            </motion.div>
+          <div className="lg:sticky lg:top-24">
+            <EnterpriseForm />
           </div>
         </div>
       </div>
