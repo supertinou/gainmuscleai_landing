@@ -27,12 +27,12 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Link href="/">
-          <a className="flex items-center gap-1 group cursor-pointer">
+          <div className="flex items-center gap-1 group cursor-pointer">
             <Dumbbell className="h-8 w-8 text-primary -rotate-12" />
             <span className="font-heading font-black text-3xl italic tracking-tighter text-white group-hover:text-primary transition-colors">
               GAINMUSCLE<span className="text-primary">.AI</span>
             </span>
-          </a>
+          </div>
         </Link>
 
         {/* Desktop Nav */}
