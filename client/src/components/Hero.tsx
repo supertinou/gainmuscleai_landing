@@ -37,7 +37,7 @@ export function Hero() {
               FUTURE BODY
             </span>
             <br />
-            <span className="text-stroke text-white/10">INSTANTLY</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-yellow-300 to-primary font-black">INSTANTLY</span>
           </h1>
           
           <p className="text-xl text-gray-400 max-w-xl font-medium leading-relaxed border-l-4 border-primary pl-6">
