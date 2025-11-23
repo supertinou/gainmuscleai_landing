@@ -41,7 +41,7 @@ export function Hero() {
           </h1>
           
           <p className="text-xl text-gray-400 max-w-xl font-medium leading-relaxed border-l-4 border-primary pl-6">
-            Upload a photo and see the results of your workouts, cardio, and diet. Visualize your potential transformation in seconds.
+            Stop guessing. Start visualizing. See exactly how your workouts, cardio, and diet will sculpt your future body in seconds.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 pt-4">
