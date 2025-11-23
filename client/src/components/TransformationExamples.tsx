@@ -43,8 +43,7 @@ export function TransformationExamples() {
     { image: stage1, label: "Uploaded Photo" },
     { image: stage2, label: "Weight Loss" },
     { image: stage3, label: "Athletic" },
-    { image: stage4, label: "Muscular" },
-    { image: stage5, label: "Peak Physique" }
+    { image: stage4, label: "Muscular" }
   ];
 
   return (
@@ -59,7 +58,7 @@ export function TransformationExamples() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-3 md:gap-4 max-w-[1400px] mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-[1400px] mx-auto">
           {stages.map((stage, index) => (
             <StageCard 
               key={index}

@@ -37,7 +37,7 @@ export function Navbar() {
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
-          {["Workouts", "Nutrition", "Science", "Pricing"].map((item) => (
+          {["Upload", "Pricing"].map((item) => (
             <a 
               key={item}
               href={`#${item.toLowerCase()}`} 
@@ -69,13 +69,14 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-zinc-900 border-b border-zinc-800 p-4 flex flex-col gap-4 animate-in slide-in-from-top-5">
-          {["Workouts", "Nutrition", "Science", "Pricing"].map((item) => (
-            <a href={`#${item.toLowerCase()}`} className="text-2xl font-heading italic font-bold text-white uppercase" onClick={() => setMobileMenuOpen(false)}>
+        <div className="md:hidden absolute top-full left-0 right-0 bg-zinc-900 border-b border-zinc-800 p-4 flex flex-col gap-4 animate-in slide-in-from-top-5 h-screen">
+          {["Upload", "Pricing"].map((item) => (
+            <a href={`#${item.toLowerCase()}`} className="text-2xl font-heading italic font-bold text-white uppercase py-2" onClick={() => setMobileMenuOpen(false)}>
               {item}
             </a>
           ))}
-          <Button className="w-full font-heading font-black uppercase text-xl bg-primary text-black">Start Now</Button>
+          <Button className="w-full font-heading font-black uppercase text-xl bg-primary text-black mt-4 h-14">Get Started</Button>
+          <Button variant="ghost" className="w-full font-heading font-bold uppercase text-lg text-white">Sign In</Button>
         </div>
       )}
     </nav>
