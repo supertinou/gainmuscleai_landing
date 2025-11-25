@@ -39,8 +39,8 @@ export function UploadSection() {
                 <span className="flex items-center gap-2"><Sparkles size={16} /> AI Enhanced</span>
               </div>
 
-              <Button className="mt-6 bg-primary text-black hover:bg-white font-heading font-black italic uppercase px-8 h-12 text-lg skew-x-[-10deg]">
-                <span className="skew-x-[10deg]">Upload Now</span>
+              <Button className="mt-6 bg-primary text-black hover:bg-white font-heading font-black italic uppercase px-8 h-12 text-lg skew-x-[-10deg]" asChild>
+                <a href="/users/sign_up"><span className="skew-x-[10deg]">Upload Now</span></a>
               </Button>
             </div>
           </motion.div>

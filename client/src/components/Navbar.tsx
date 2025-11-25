@@ -50,11 +50,11 @@ export function Navbar() {
         </div>
 
         <div className="hidden md:flex items-center gap-4">
-          <Button variant="ghost" className="text-white font-bold uppercase tracking-wider hover:text-primary hover:bg-transparent">
-            Sign In
+          <Button variant="ghost" className="text-white font-bold uppercase tracking-wider hover:text-primary hover:bg-transparent" asChild>
+            <a href="/users/sign_in">Sign In</a>
           </Button>
-          <Button className="font-heading font-black text-xl italic uppercase bg-primary text-black hover:bg-white hover:text-black transition-all skew-x-[-10deg] px-8 h-12">
-            <span className="skew-x-[10deg]">Get Started</span>
+          <Button className="font-heading font-black text-xl italic uppercase bg-primary text-black hover:bg-white hover:text-black transition-all skew-x-[-10deg] px-8 h-12" asChild>
+            <a href="/users/sign_up"><span className="skew-x-[10deg]">Get Started</span></a>
           </Button>
         </div>
 
@@ -75,8 +75,12 @@ export function Navbar() {
               {item}
             </a>
           ))}
-          <Button className="w-full font-heading font-black uppercase text-xl bg-primary text-black mt-4 h-14">Get Started</Button>
-          <Button variant="ghost" className="w-full font-heading font-bold uppercase text-lg text-white">Sign In</Button>
+          <Button className="w-full font-heading font-black uppercase text-xl bg-primary text-black mt-4 h-14" asChild>
+            <a href="/users/sign_up">Get Started</a>
+          </Button>
+          <Button variant="ghost" className="w-full font-heading font-bold uppercase text-lg text-white" asChild>
+            <a href="/users/sign_in">Sign In</a>
+          </Button>
         </div>
       )}
     </nav>

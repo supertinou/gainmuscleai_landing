@@ -42,8 +42,8 @@ export function Pricing() {
             ))}
           </ul>
 
-          <Button className="w-full mt-auto bg-zinc-800 text-white hover:bg-white hover:text-black font-heading font-black italic uppercase h-16 text-xl skew-x-[-10deg]">
-             <span className="skew-x-[10deg]">Subscribe Monthly</span>
+          <Button className="w-full mt-auto bg-zinc-800 text-white hover:bg-white hover:text-black font-heading font-black italic uppercase h-16 text-xl skew-x-[-10deg]" asChild>
+             <a href="/users/sign_up"><span className="skew-x-[10deg]">Subscribe Monthly</span></a>
           </Button>
         </div>
 
@@ -79,8 +79,8 @@ export function Pricing() {
             ))}
           </ul>
 
-          <Button className="w-full mt-auto bg-primary text-black hover:bg-white font-heading font-black italic uppercase h-16 text-xl skew-x-[-10deg] shadow-lg shadow-primary/20">
-             <span className="skew-x-[10deg]">Subscribe Yearly</span>
+          <Button className="w-full mt-auto bg-primary text-black hover:bg-white font-heading font-black italic uppercase h-16 text-xl skew-x-[-10deg] shadow-lg shadow-primary/20" asChild>
+             <a href="/users/sign_up"><span className="skew-x-[10deg]">Subscribe Yearly</span></a>
           </Button>
         </div>
       </div>

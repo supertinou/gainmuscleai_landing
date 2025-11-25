@@ -45,10 +45,12 @@ export function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 pt-4">
-            <Button size="lg" className="h-16 px-10 text-2xl font-heading font-black italic uppercase bg-primary text-black hover:bg-white hover:text-black transition-all skew-x-[-10deg]">
-              <span className="skew-x-[10deg] flex items-center gap-2">
-                Upload Photo <Zap className="fill-black" />
-              </span>
+            <Button size="lg" className="h-16 px-10 text-2xl font-heading font-black italic uppercase bg-primary text-black hover:bg-white hover:text-black transition-all skew-x-[-10deg]" asChild>
+              <a href="/users/sign_up">
+                <span className="skew-x-[10deg] flex items-center gap-2">
+                  Upload Photo <Zap className="fill-black" />
+                </span>
+              </a>
             </Button>
           </div>
           
