@@ -21,8 +21,8 @@ export function Footer() {
           <ul className="space-y-2 text-sm">
             <li><a href="#" className="hover:text-primary transition-colors">Features</a></li>
             <li><a href="#" className="hover:text-primary transition-colors">Pricing</a></li>
-            <li><a href="#" className="hover:text-primary transition-colors">For Gyms</a></li>
-            <li><a href="#" className="hover:text-primary transition-colors">API</a></li>
+            <li><a href="#" className="hover:text-primary transition-colors">Transformations</a></li>
+            <li><a href="#" className="hover:text-primary transition-colors">How it Works</a></li>
           </ul>
         </div>
 
