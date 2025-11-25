@@ -53,8 +53,8 @@ export function TransformationExamples() {
           <h2 className="text-4xl md:text-6xl font-heading font-black italic uppercase mb-6 text-white">
             THE <span className="text-primary">JOURNEY</span>
           </h2>
-          <p className="text-xl text-gray-400 font-medium">
-            From where you are, to where you want to be.
+          <p className="text-xl text-gray-400 font-medium max-w-2xl mx-auto">
+            Upload a photo of yourself and see different potential evolutions of your body—from where you are to where you want to be: less fat, more muscle, an athletic body, or peak physique.
           </p>
         </div>
 
